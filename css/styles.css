@@ -131,7 +131,7 @@ a:link {
 	}
 
 	.hamburger-menu {
-		margin: 1.5rem 2rem 2rem 2rem;
+		margin: 1rem 2rem 2rem 2rem;
 		display: flex;
 		flex-flow: column wrap;
 		justify-content: space-between;
@@ -153,6 +153,10 @@ a:link {
 		transition: all 0.5s;
 	}
 
+	.nav {
+		padding: 15px;
+	}
+
 	.navbar {
 		display: none;
 	}
@@ -168,7 +172,7 @@ a:link {
 		margin-top: 0;
 		background: var(--clr-dark);
 		flex-direction: column;
-		top: 90px;
+		top: 70px;
 		text-align: right;
 		height: 100vh;
 		padding: 0;
@@ -285,7 +289,7 @@ h1 {
 	margin-top: 5px;
 	display: block;
 	height: 5px;
-	width: 10%;
+	width: 150px;
 	background: var(--clr-mid-light);
 	left: 50%;
 	border-radius: 5px;
@@ -302,6 +306,34 @@ h1 {
 	max-width: 50ch;
 	font-size: 1.25rem;
 	padding-left: 40px;
+}
+
+.cv {
+	display: flex;
+	justify-content: center;
+}
+
+.cv-doc {
+	color: var(--clr-dark);
+	border: 1px solid var(--clr-dark);
+	font-weight: 700;
+	border-radius: 20px;
+	width: 1000px;
+	padding: 5px;
+	max-width: 250px;
+	text-align: center;
+	font-size: 1rem;
+	margin-bottom: 30px;
+	box-shadow: 0px 5px 10px 0px var(--clr-dark);
+}
+
+.cv-doc:visited {
+	color: var(--clr-dark);
+}
+
+.cv-doc:hover {
+	background-color: var(--clr-dark);
+	color: var(--clr-light);
 }
 
 .tools-title {
@@ -384,7 +416,7 @@ img ~ p {
 	margin-top: 10px;
 	display: block;
 	height: 5px;
-	width: 10%;
+	width: 150px;
 	background: var(--clr-mid-light);
 	left: 50%;
 	border-radius: 5px;
@@ -479,7 +511,7 @@ img ~ p {
 	margin-top: 10px;
 	display: block;
 	height: 5px;
-	width: 10%;
+	width: 150px;
 	background: var(--clr-mid-light);
 	left: 50%;
 	border-radius: 5px;
@@ -519,10 +551,6 @@ textarea {
 	resize: none;
 }
 
-.form__item--subject {
-	/* margin-bottom: 10px; */
-}
-
 .form__item:focus {
 	outline: none;
 	border-bottom: 3px solid var(--clr-mid-light);
@@ -533,6 +561,12 @@ textarea {
 	font-family: var(--ff-primary);
 	font-size: 1rem;
 	opacity: 0.5;
+}
+
+@media (max-width: 950px) {
+	.form__group--item {
+		width: 100%;
+	}
 }
 
 button {

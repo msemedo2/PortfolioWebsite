@@ -13,6 +13,7 @@ const navbar = document.getElementById('navbar');
 const barTop = document.querySelector('.bar-top');
 const barMiddle = document.querySelector('.bar-middle');
 const barBottom = document.querySelector('.bar-bottom');
+const navLink = document.querySelectorAll('.nav__link');
 
 hamburgerMenu.addEventListener('click', () => {
 	if (navbar.classList.contains('sidebar')) {
@@ -44,6 +45,16 @@ function closeNav() {
 	}
 }
 window.addEventListener('resize', closeNav);
+
+navLink.forEach((item) => {
+	item.addEventListener('click', () => {
+		navbar.classList.remove('sidebar');
+		barTop.style.transform = 'rotate(0deg)';
+		barMiddle.style.transform = 'translateX(0rem)';
+		barMiddle.style.opacity = '1';
+		barBottom.style.transform = 'rotate(0deg)';
+	});
+});
 
 // FORM VALIDATION
 
