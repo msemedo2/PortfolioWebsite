@@ -1,10 +1,10 @@
 // LOADER
 
-// let loader = document.getElementById('loader');
+let loader = document.getElementById('loader');
 
-// setTimeout(() => {
-// 	loader.style.display = 'none';
-// }, 1000);
+setTimeout(() => {
+	loader.style.display = 'none';
+}, 1000);
 
 // HAMBURGER MENU
 
