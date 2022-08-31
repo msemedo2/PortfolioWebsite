@@ -551,6 +551,10 @@ textarea {
 	resize: none;
 }
 
+textarea {
+	height: auto;
+}
+
 .form__item:focus {
 	outline: none;
 	border-bottom: 3px solid var(--clr-mid-light);
@@ -569,7 +573,7 @@ textarea {
 	}
 }
 
-button {
+.btn {
 	width: 150px;
 	height: 45px;
 	font-size: 0.75rem;
@@ -586,7 +590,7 @@ button {
 	margin: 20px auto auto;
 }
 
-button:hover {
+.btn:hover {
 	background-color: #2ee59d;
 	color: var(--clr-dark);
 	border: none;
@@ -621,7 +625,10 @@ button:hover {
 	min-height: 295px;
 	margin: 150px auto auto;
 	width: 100%;
-	background-color: var(--clr-dark);
+	background-image: url('../img/desk.2.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .footer__links {
@@ -657,4 +664,37 @@ button:hover {
 
 .copyright__text {
 	margin: 0;
+}
+
+/* CONFIRMATION MODAL */
+
+.modal {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	font-weight: 700;
+	top: 23%;
+	justify-content: center;
+	max-height: 210px;
+	text-align: center;
+}
+
+.success-message {
+	background-color: var(--clr-light);
+	max-width: 60%;
+	border-radius: 20px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.success-title {
+	font-size: 2rem;
+	padding: 0 20px;
+	margin-bottom: 20px;
+}
+
+.check {
+	color: #09c372;
+	position: relative;
+	top: -10%;
 }

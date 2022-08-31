@@ -69,10 +69,10 @@ form.addEventListener('submit', (e) => {
 
 	validateInputs();
 
-	// let success = document.getElementsByClassName('success').length;
-	// if (success === 4) {
-	// 	sendEmail();
-	// }
+	let success = document.getElementsByClassName('success').length;
+	if (success === 4) {
+		sendEmail();
+	}
 });
 
 const setError = (element, message) => {
@@ -131,3 +131,40 @@ const validateInputs = () => {
 		setSuccess(text);
 	}
 };
+
+// SEND EMAIL
+
+const modal = document.querySelector('.modal');
+
+document.addEventListener('click', () => {
+	modal.style.display = 'none';
+});
+
+(function () {
+	emailjs.init('PShDwtnkhX6FkA0Ge');
+})();
+
+function sendEmail() {
+	let name = document.getElementById('name').value;
+	let email = document.getElementById('email').value;
+	let subject = document.getElementById('subject').value;
+	let text = document.getElementById('text').value;
+
+	let templateParams = {
+		name: name,
+		email: email,
+		subject: subject,
+		text: text,
+	};
+
+	emailjs.send('service_ngijfeh', 'template_w165o0n', templateParams).then(
+		function (response) {
+			console.log('SUCCESS!', response.status, response.text);
+			// SUCCESS MODAL
+			modal.style.display = 'flex';
+		},
+		function (error) {
+			console.log('FAILED...', error);
+		}
+	);
+}
