@@ -308,7 +308,7 @@ h1 {
 }
 
 .cv-doc {
-	color: var(--clr-dark);
+	color: var(--clr-dark) !important;
 	font-weight: 700;
 	border-radius: 20px;
 	width: 1000px;
@@ -476,7 +476,7 @@ img ~ p {
 		margin-bottom: 20px;
 	}
 	.project-img {
-		max-width: 80%;
+		max-width: 90%;
 	}
 	.project-text > h3 {
 		margin-top: 0;
