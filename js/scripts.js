@@ -141,7 +141,7 @@ document.addEventListener('click', () => {
 });
 
 (function () {
-	emailjs.init('PShDwtnkhX6FkA0Ge');
+	emailjs.init('jEsjPBTKasG7wrr3g');
 })();
 
 function sendEmail() {
