@@ -351,7 +351,15 @@ img ~ p {
 }
 
 .project-img {
-	max-width: 60%;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.project-img-container {
+	max-width: 50%;
+}
+
+.project-img {
+	width: 700px;
 	border-radius: 20px;
 }
 
@@ -676,7 +684,7 @@ textarea {
 		margin-bottom: 20px;
 	}
 	.project-img {
-		max-width: 90%;
+		width: 100%;
 	}
 	.project-text > h3 {
 		margin-top: 0;
