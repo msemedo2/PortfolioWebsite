@@ -168,3 +168,37 @@ function sendEmail() {
 		}
 	);
 }
+
+// Animation - Intersection Observer
+
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		console.log(entry);
+		if (entry.isIntersecting) {
+			entry.target.classList.add('show');
+		} else {
+			entry.target.classList.remove('show');
+		}
+	});
+});
+const observerText = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		console.log(entry);
+		if (entry.isIntersecting) {
+			entry.target.classList.add('show-text');
+		} else {
+			entry.target.classList.remove('show-text');
+		}
+	});
+});
+
+const rightName = document.querySelectorAll('.right-name');
+const right = document.querySelectorAll('.right');
+const rightImg = document.querySelectorAll('.right-img');
+const left = document.querySelectorAll('.left');
+const textScale = document.querySelectorAll('.text-scale');
+rightName.forEach((el) => observer.observe(el));
+right.forEach((el) => observer.observe(el));
+rightImg.forEach((el) => observer.observe(el));
+left.forEach((el) => observer.observe(el));
+textScale.forEach((el) => observerText.observe(el));
