@@ -250,6 +250,12 @@ h1 {
 	padding-left: 40px;
 }
 
+.about-break {
+	content: '';
+	display: block;
+	margin: 10px 0px;
+}
+
 .cv {
 	display: flex;
 	justify-content: center;
@@ -266,6 +272,7 @@ h1 {
 	font-size: 1rem;
 	margin-bottom: 30px;
 	border: 1px solid var(--clr-dark);
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .cv-doc:visited {
