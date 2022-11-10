@@ -159,7 +159,6 @@ function sendEmail() {
 
 	emailjs.send('service_ngijfeh', 'template_w165o0n', templateParams).then(
 		function (response) {
-			console.log('SUCCESS!', response.status, response.text);
 			// SUCCESS MODAL
 			modal.style.display = 'flex';
 		},
@@ -173,7 +172,6 @@ function sendEmail() {
 
 const observer = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
-		console.log(entry);
 		entry.target.classList.toggle('show', entry.isIntersecting);
 		if (entry.isIntersecting) observer.unobserve(entry.target);
 	});
@@ -181,7 +179,6 @@ const observer = new IntersectionObserver((entries) => {
 
 const observerText = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
-		console.log(entry);
 		entry.target.classList.toggle('show-text', entry.isIntersecting);
 		if (entry.isIntersecting) observerText.unobserve(entry.target);
 	});
