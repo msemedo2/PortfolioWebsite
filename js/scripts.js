@@ -174,21 +174,16 @@ function sendEmail() {
 const observer = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
 		console.log(entry);
-		if (entry.isIntersecting) {
-			entry.target.classList.add('show');
-		} else {
-			entry.target.classList.remove('show');
-		}
+		entry.target.classList.toggle('show', entry.isIntersecting);
+		if (entry.isIntersecting) observer.unobserve(entry.target);
 	});
 });
+
 const observerText = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
 		console.log(entry);
-		if (entry.isIntersecting) {
-			entry.target.classList.add('show-text');
-		} else {
-			entry.target.classList.remove('show-text');
-		}
+		entry.target.classList.toggle('show-text', entry.isIntersecting);
+		if (entry.isIntersecting) observerText.unobserve(entry.target);
 	});
 });
 
@@ -197,6 +192,7 @@ const right = document.querySelectorAll('.right');
 const rightImg = document.querySelectorAll('.right-img');
 const left = document.querySelectorAll('.left');
 const textScale = document.querySelectorAll('.text-scale');
+
 rightName.forEach((el) => observer.observe(el));
 right.forEach((el) => observer.observe(el));
 rightImg.forEach((el) => observer.observe(el));
