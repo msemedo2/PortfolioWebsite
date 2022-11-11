@@ -26,6 +26,7 @@
 
 html {
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 body {
@@ -689,6 +690,10 @@ textarea {
 
 /* Media Queries */
 @media (max-width: 950px) {
+	/* html {
+		
+	} */
+
 	.logo__img {
 		width: 40px;
 		margin-top: 1px;
@@ -720,6 +725,7 @@ textarea {
 
 	.nav {
 		padding: 15px;
+		max-width: 100vw;
 	}
 
 	.navbar {
