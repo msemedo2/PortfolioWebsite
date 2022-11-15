@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miguel Semedo</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://kit.fontawesome.com/faae2e29db.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <!-- Loader -->
+  <div id="loader"></div>
+  <!-- Nav -->
+  <header id="home">
+    <nav class="nav">
+      <div class="logo">
+        <a href="/index.html#home">
+          <img src="./img/logo.svg" alt="" class="logo__img">
+        </a>
+      </div>
+      <div id="hamburger-menu" class="hamburger-menu">
+        <div class="bar-top"></div>
+        <div class="bar-middle"></div>
+        <div class="bar-bottom"></div>
+      </div>
+      <div class="navbar" id="navbar">
+        <ul class="nav__list" id="nav__list">
+          <li class="nav__item"><a href="/index.html#home" class="nav__link">HOME</a></li>
+          <li class="nav__item"><a href="/index.html#about" class="nav__link">ABOUT</a></li>
+          <li class="nav__item"><a href="/index.html#projects" class="nav__link">PROJECTS</a></li>
+          <li class="nav__item"><a href="/index.html#contact" class="nav__link nav__link--contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="mikeflix-case-study-section">
+    <h1 class="mikeflix-title">MikeFlix Case Study</h1>
+    <div class="project-section">
+      <!--  -->
+      <div class="project project-2 intro-container">
+        <div class="mikeflix-container">
+          <div class="project-text">
+            <h3>Overview</h3>
+            <p>
+              MikeFlix is a web application, developed using the MERN stack, that provides users with access to
+              information about
+              movies, directors, and genres.
+              <br>
+              Users can create an account, update their personal information, and create a list of favorite movies.
+            </p>
+          </div>
+          <div class="project-text">
+            <h3>Purpose & Context</h3>
+            <p>
+              MikeFlix was a personal project I built as part of my full-stack web development course at CareerFoundy,
+              to
+              demonstrate
+              my mastery of JavaScript development.
+              <br><br>
+              With the vast supply of movies available for people to watch, it is often hard to know exactly what to
+              watch.
+              The number of streaming apps and websites can sometimes be a bit overwhelming when it comes time to decide
+              on what to
+              watch and often settling on a less-than-ideal show.
+            </p>
+          </div>
+        </div>
+        <div class="mikeflix-img">
+          <img class="project-img project-img-2 mikeflix-img" src="./img/mikeflix-img.png" alt="mikeflix image">
+        </div>
+      </div>
+      <!--  -->
+      <div class="project project-1">
+        <div class="mikeflix-img">
+          <img class="project-img mikeflix-img" src="./img/favs.png" alt="mikeflix-image">
+        </div>
+        <div class="project project-2">
+          <div class="mikeflix-container">
+            <div class="project-text">
+              <h3>Objective</h3>
+              <p>
+                The project aim was to have an ambitious full-stack project I could add to my professional portfolio.
+                <br>
+                The problem I wanted to solve was to build the complete server-side and client-side application from
+                scratch.
+              </p>
+            </div>
+            <div class="project-text">
+              <h3>Duration</h3>
+              <p>
+                The development of the complete application took me around 2 months, though it took me longer to build
+                the client-side,
+                given it was my first interaction with React.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <h3 class="approach">Approach</h3>
+      <div class="project project-2">
+        <div class="mikeflix-container">
+          <div class="project-text">
+            <h3>Server Side</h3>
+            <p>
+              I created a RESTful API using Node.js and Express, that interacts with a non-relational database (MongoDB)
+              which, given
+              its flexibility, makes it a great choice for storing organic data with constantly changing requirements.
+              <br><br>
+              The API can be accessed via commonly used HTTP methods like GET and POST.
+
+              To retrieve data from and store
+              data in the
+              database, CRUD methods are used. The API provides movie information in JSON format.
+              <br>
+              To test the API, I used Postman. I also included user authentication and authorization in the form of
+              basic HTTP
+              authentication and JWT authentication.
+            </p>
+          </div>
+        </div>
+        <div class="mikeflix-img">
+          <img class="project-img project-img-2 mikeflix-img" src="./img/postman.png" alt="postman image">
+        </div>
+      </div>
+      <!--  -->
+      <div class="project project-1">
+        <div class="mikeflix-img">
+          <img class="project-img mikeflix-img" src="./img/login.png" alt="mikeflix-image">
+        </div>
+        <div class="project project-2 client">
+          <div class="mikeflix-container">
+            <div class="project-text">
+              <h3>Client Side</h3>
+              <p>
+                Once the server side was set up, I started to build the interface users would need when making requests
+                to, and
+                receiving responses from the server-side.
+                <br><br>
+                It is a single-page, responsive application developed with React and React-Redux. It provides several
+                interface views,
+                including, but not limited to, a main view (shows a list of all movies), a single movie view (shows data
+                about a single
+                movie and allows users to add the movie to their list of favorites), a login view, a registration view
+                and a profile
+                view (where users can update their user data and list of favorites).
+                <br><br>
+                Developing the client-side took me a while, to fully understand the flow of React Redux and how to
+                manage the state of
+                the application, but after those concepts were cleared, it was easy to see its effectiveness.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="project project-2">
+        <div class="mikeflix-container">
+          <div class="project-text">
+            <h3>Class VS Functional Components</h3>
+            <p>
+              In React everything consists of two types of components: class components and functional components.
+              <br>
+              For MikeFlix front-end, I utilized a mix of both types to practice both spectrums. In a real-world
+              scenario, more
+              consistency would be advisable.
+              <br><br>
+              With React latest versions, class components have taken a back seat to functional components.
+
+              Deciding which component to use always devolves into a discussion of inheritance vs composition. Using
+              functional
+              components encourages composition, while class components lend themselves to inheritance design patterns.
+              <br><br>
+              Although I would opt in using functional components most of the time, React still supports class
+              components for legacy
+              purposes.
+            </p>
+          </div>
+        </div>
+        <div class="mikeflix-img">
+          <img class="project-img project-img-2 mikeflix-img" src="./img/class.vs.functional.png" alt="postman image">
+        </div>
+      </div>
+      <!--  -->
+      <div class="project project-2">
+        <div class="mikeflix-container">
+          <div class="project-text challenges">
+            <h3>Challenges</h3>
+            <p>
+              This was my most challenging and rewarding project to build. It taught me how to create an application
+              from the ground
+              up, both the front-end and back-end.
+              I have enjoyed building the API and working with database structures.
+              <br>
+              At first, the concept of state and unidirectional data flow in React was hard to grasp but it eventually
+              made sense.
+              <br><br>
+              React-Redux added a huge level of complexity. It allows a much more sophisticated way to share "state" 
+              between
+              components by storing them in a central "store". Figuring out how that works and how to refactor my app
+              took me a while,
+              but in the end, it all made a lot of sense and it became easy to see that when an application starts to
+              get more complex
+              the best option will be React's Context API or React Redux to avoid prop drilling.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="conclusion-container">
+        <div class="project-text">
+          <h3>Conclusion</h3>
+          <p>MikeFlix was my first full-stack web application. Learning the ins and outs of React was one of the most
+            fun experiences
+            I had learning a new tool, and it just made me appreciate the thought put into it and the simplicity,
+            structure, and
+            reusability it gives your application.</p>
+        </div>
+        <div class="project-text">
+          <h3>Credits</h3>
+          <p>My role was as lead developer, but I also have to point out the support and direction given by my mentor
+            Mohamed and
+            tutor Adam throughout the project.
+            Both provided valuable insight into different ways to approach problems, and suggestions on how to
+            structure
+            the site.</p>
+        </div>
+      </div>
+      <!--  -->
+      <h3 class="takeaways-container">Key Takeaways</h3>
+      <div class=" project-2 key-container">
+        <div class="project-text takeaways">
+          <h3>Backend</h3>
+          <ul>
+            <li>How to set up and use NodeJS with nvm (node version manager) and npm (node package manager) to run
+              JavaScript without a
+              browser
+            </li>
+            <li>How to create API endpoints with Express and test them with Postman
+            </li>
+            <li>How to use middleware
+            </li>
+            <li>Relational and non-relational databases (usage, differences, and advantages)
+            </li>
+            <li>Authentication and authorization (HTTP and JWT) with Passport middleware
+            </li>
+            <li>Data security with CORS and password hashing
+            </li>
+          </ul>
+        </div>
+        <div class="project-text takeaways">
+          <h3>Frontend</h3>
+          <ul>
+            <li>How to use Parcel built tool to convert (transpile, bundle and minify) a project from the development
+              stage to a
+              production version
+            </li>
+            <li>Class components and functional components in React
+            </li>
+            <li>Using lifecycle methods and hooks to "schedule" when certain operations are executed
+            </li>
+            <li>Working with state and props to manage in-memory data and pass it between components
+            </li>
+            <li>How to work with Redux in React state management (data flow between components)
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <!-- Footer -->
+    <footer class="footer footer-case-study">
+      <div class="footer__links">
+        <a href="https://www.linkedin.com/in/miguel-semedo-09a908167/" target="_blank" class="footer__link">
+          <i class="fa-brands fa-linkedin fa-3x footer__item"></i>
+        </a>
+        <a href="mailto:miguel.2.semedo@gmail.com" rel="noopener noreferrer" target="_blank" class="footer__link">
+          <i class="fa-solid fa-envelope fa-3x footer__item"></i>
+        </a>
+        <a href="https://github.com/msemedo2" target="_blank" class="footer__link">
+          <i class="fa-brands fa-square-github fa-3x footer__item"></i>
+        </a>
+      </div>
+      <div class="copyright">
+        <p class="copyright__text">Designed & Built by Miguel Semedo</p>
+      </div>
+    </footer>
+  </section>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

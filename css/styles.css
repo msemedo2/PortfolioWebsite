@@ -393,7 +393,7 @@ img ~ p {
 	color: var(--clr-mid-light);
 }
 
-.project-link:hover {
+.feather:hover {
 	transition: all 0.2s ease-in-out;
 	transform: scale(1.1);
 }
@@ -401,6 +401,12 @@ img ~ p {
 .feather {
 	width: 40px;
 	color: var(--clr-dark);
+}
+
+.fa-solid {
+	color: var(--clr-dark);
+	position: relative;
+	top: 5px;
 }
 
 /* CONTACT SECTION */
@@ -688,12 +694,85 @@ textarea {
 	transform: translateX(0);
 }
 
+/* MikeFlix Case Study */
+
+.mikeflix-case-study-section {
+	background-color: #f9f9f9;
+	margin: 0 auto;
+	padding-bottom: 0px;
+}
+
+.mikeflix-title {
+	text-align: center;
+	padding-top: 130px;
+	font-size: 4rem;
+}
+
+.mikeflix-title::after {
+	content: '';
+	margin: 0 auto;
+	margin-top: 5px;
+	display: block;
+	height: 5px;
+	width: 250px;
+	background: var(--clr-mid-light);
+	left: 50%;
+	border-radius: 5px;
+}
+
+.intro-container {
+	margin-top: 100px;
+}
+
+.approach {
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 80px;
+}
+
+.mikeflix-img {
+	margin: auto 0;
+}
+
+.client {
+	margin-bottom: 0px;
+}
+
+.challenges {
+	max-width: 1380px;
+	margin: 0 auto;
+}
+
+.conclusion-container {
+	display: flex;
+	justify-content: center;
+	gap: 80px;
+}
+
+.takeaways-container {
+	text-align: center;
+	font-size: 2rem;
+	margin-top: 80px;
+}
+
+.key-container {
+	display: flex;
+	justify-content: center;
+	gap: 100px;
+	margin-bottom: 0px;
+}
+
+.takeaways {
+	line-height: 1.5;
+	font-size: 1.25rem;
+}
+
+.footer-case-study {
+	margin-top: 30px;
+}
+
 /* Media Queries */
 @media (max-width: 950px) {
-	/* html {
-		
-	} */
-
 	.logo__img {
 		width: 40px;
 		margin-top: 1px;
@@ -782,6 +861,16 @@ textarea {
 	}
 	.project-text > h3 {
 		margin-top: 0;
+	}
+	.mikeflix-container {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+	.conclusion-container {
+		flex-direction: column;
+		align-items: center;
 	}
 }
 
