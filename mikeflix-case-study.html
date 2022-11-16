@@ -145,7 +145,7 @@
                 Once the server side was set up, I started to build the interface users would need when making requests
                 to, and
                 receiving responses from the server-side.
-                <br><br>
+                <br>
                 It is a single-page, responsive application developed with React and React-Redux. It provides several
                 interface views,
                 including, but not limited to, a main view (shows a list of all movies), a single movie view (shows data
@@ -156,7 +156,14 @@
                 <br><br>
                 Developing the client-side took me a while, to fully understand the flow of React Redux and how to
                 manage the state of
-                the application, but after those concepts were cleared, it was easy to see its effectiveness.
+                the application.
+
+                With the help of external resources such as blogs and videos, I finally got a clearer image of the data
+                flow.
+
+                With Redux the shared state from the components is put into a centralized location, outside the
+                component tree, giving
+                every component the ability to access that state or trigger actions.
               </p>
             </div>
           </div>
@@ -199,18 +206,29 @@
               This was my most challenging and rewarding project to build. It taught me how to create an application
               from the ground
               up, both the front-end and back-end.
+
               I have enjoyed building the API and working with database structures.
-              <br>
+              <br><br>
+              React is one of the most popular javascript frameworks and because of it, the availability of resources is
+              extensive,
+              which helped me with a better understanding of its concepts.
+
               At first, the concept of state and unidirectional data flow in React was hard to grasp but it eventually
               made sense.
+
+              By defining and separating the concepts involved in state management and enforcing rules that maintain
+              independence
+              between views and states, we give our code more structure and maintainability.
+              <br>
+              This is the basic idea behind Redux: a single centralized place to contain the global state in your
+              application, and
+              specific patterns to follow when updating that state to make the code predictable.
               <br><br>
-              React-Redux added a huge level of complexity. It allows a much more sophisticated way to share "state" 
-              between
-              components by storing them in a central "store". Figuring out how that works and how to refactor my app
-              took me a while,
-              but in the end, it all made a lot of sense and it became easy to see that when an application starts to
-              get more complex
-              the best option will be React's Context API or React Redux to avoid prop drilling.
+              All the research on this subject helped me improve not only my googling and researching skills, one of web
+              developer's
+              best friends but also made me more succinctly understand React component three and the difference between
+              one-way data
+              flow vs storing state outside the component tree.
             </p>
           </div>
         </div>
