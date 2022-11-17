@@ -560,6 +560,11 @@ textarea {
 	margin-top: 25px;
 }
 
+.mail-to {
+	position: relative;
+	top: -4px;
+}
+
 .footer__item:hover {
 	color: var(--clr-mid-light);
 	transition: color 0.3s ease-in-out;
