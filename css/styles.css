@@ -241,8 +241,10 @@ h1 {
 
 .about-section {
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	gap: 100px;
+	margin-bottom: 80px;
+	margin-top: 70px;
 }
 
 .about-text {
@@ -287,6 +289,76 @@ h1 {
 	transition: all 0.2s ease-in-out;
 }
 
+.headshot-top-container {
+	max-width: 50%;
+	margin-right: 70px;
+}
+
+.headshot-container {
+	transform: rotate(-15deg);
+	box-shadow: rgba(30, 30, 30, 0.4) 5px 5px, rgba(30, 30, 30, 0.3) 10px 10px,
+		rgba(30, 30, 30, 0.2) 15px 15px, rgba(30, 30, 30, 0.1) 20px 20px,
+		rgba(30, 30, 30, 0.05) 25px 25px;
+	border-radius: 20px;
+	transition: transform 500ms ease-in-out;
+	max-width: 100%;
+	max-height: 374px;
+}
+
+.headshot {
+	background-color: #74bdcb;
+	background-image: url('https://www.transparenttextures.com/patterns/45-degree-fabric-light.png');
+	position: relative;
+	bottom: 8px;
+	right: 10px;
+	border-radius: 20px;
+	filter: grayscale(100%);
+	transition: transform 500ms ease-in-out;
+}
+
+.headshot-img {
+	display: block;
+	transform: scale(90%);
+	transform-origin: bottom;
+	transition: transform 500ms ease-in-out;
+	width: 100%;
+}
+
+.headshot-container:hover {
+	animation: rotate 500ms;
+	animation-fill-mode: forwards;
+	transform: rotate(0deg);
+}
+
+.headshot-container:hover .headshot-img {
+	animation-fill-mode: forwards;
+	transform: scale(100%);
+}
+
+.headshot-container:hover .headshot {
+	animation: grayscale 500ms;
+	animation-fill-mode: forwards;
+	transform: translate(10px, 8px);
+}
+
+@keyframes rotate {
+	100% {
+		box-shadow: rgba(116, 189, 203, 0.4) 0px 5px,
+			rgba(116, 189, 203, 0.3) 0px 10px, rgba(116, 189, 203, 0.2) 0px 15px,
+			rgba(116, 189, 203, 0.1) 0px 20px, rgba(116, 189, 203, 0.05) 0px 25px;
+	}
+}
+
+@keyframes grayscale {
+	100% {
+		filter: grayscale(0%);
+	}
+}
+
+.tools {
+	margin-bottom: 60px;
+}
+
 .tools-title {
 	font-size: 1.75rem;
 	text-align: center;
@@ -294,10 +366,6 @@ h1 {
 
 div > h3 {
 	margin-top: 0;
-}
-
-.tools {
-	padding-right: 40px;
 }
 
 .tools-icons {
@@ -881,11 +949,16 @@ textarea {
 
 @media (max-width: 1150px) {
 	.about-section {
-		flex-direction: column;
-		gap: 0;
+		flex-direction: column-reverse;
+		gap: 80px;
+		align-items: center;
+	}
+	.headshot-top-container {
+		max-width: 60%;
+		margin-right: 0px;
 	}
 	.about-text {
-		max-width: 50ch;
+		max-width: 100ch;
 		width: 80%;
 		margin: 0 auto;
 		padding-left: 0;
@@ -903,5 +976,28 @@ textarea {
 @media (max-width: 950px) {
 	.form__group--item {
 		width: 100%;
+	}
+	.about-section {
+		gap: 45px;
+	}
+	.about-text {
+		text-align: justify;
+	}
+}
+
+@media (hover: none) {
+	.headshot-container {
+		transform: rotate(0deg);
+		box-shadow: rgba(116, 189, 203, 0.4) 0px 5px,
+			rgba(116, 189, 203, 0.3) 0px 10px, rgba(116, 189, 203, 0.2) 0px 15px,
+			rgba(116, 189, 203, 0.1) 0px 20px, rgba(116, 189, 203, 0.05) 0px 25px;
+	}
+	.headshot {
+		bottom: 0px;
+		right: 0px;
+		filter: grayscale(0%);
+	}
+	.headshot-img {
+		transform: scale(100%);
 	}
 }
